@@ -1,0 +1,6 @@
+streamlit
+pip==23.3.1
+streamlit-option-menu==0.3.6
+numpy==1.26.0
+mysql-connector-python==8.1.0
+Levenshtein==0.23.0
