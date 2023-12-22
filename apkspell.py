@@ -115,8 +115,8 @@ def jaro_winkler_distance(str1, str2, p=0.1, L=4):
 
 mydb = mysql.connector.connect(
     host="localhost",
-    user="root",
-    password="",
+    user="mbkm",
+    password="123",
     # database="skripsi"
     database="madureseset",
 )
