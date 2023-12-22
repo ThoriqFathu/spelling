@@ -347,7 +347,11 @@ def cal_hamming(w1, w2):
 
         html_ += "</tr>"
     html_ += "</table>"
-    st.success(f'Hamming Distance between "{w1}" and "{w2}" = {result}')
+    # st.success(f'Hamming Distance between "{w1}" and "{w2}" = {result}')
+    st.markdown(
+        f"""<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Hamming Distance between <b>"{w1}"</b> and <b>"{w2}"</b> = <b>{result}</b></div>""",
+        unsafe_allow_html=True,
+    )
     st.markdown("<p><strong>Detail:</strong></p>", unsafe_allow_html=True)
     st.markdown(
         html_,
@@ -425,7 +429,11 @@ def cal_levenshtein_distance(str1, str2):
 
         html_ += "</tr>"
     html_ += "</table>"
-    st.success(f'Levenshtein distance between "{str1}" and "{str2}" = {result}')
+    # st.success(f'Levenshtein distance between "{str1}" and "{str2}" = {result}')
+    st.markdown(
+        f"""<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Levenshtein distance between <b>"{str1}"</b> and <b>"{str2}"</b> = <b>{result}</b></div>""",
+        unsafe_allow_html=True,
+    )
     st.markdown("<p><strong>Detail:</strong></p>", unsafe_allow_html=True)
     st.markdown(
         html_,
@@ -499,7 +507,12 @@ def cal_damerau_levenshtein_distance(str1, str2):
 
         html_ += "</tr>"
     html_ += "</table>"
-    st.success(f'Damerau-Levenshtein distance between "{str1}" and "{str2}" = {result}')
+    # st.success(f'Damerau-Levenshtein distance between "{str1}" and "{str2}" = {result}')
+    st.markdown(
+        f"""<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Damerau-Levenshtein distance between <b>"{str1}"</b> and <b>"{str2}"</b> = <b>{result}</b></div>""",
+        unsafe_allow_html=True,
+    )
+
     st.markdown("<p><strong>Detail:</strong></p>", unsafe_allow_html=True)
     st.markdown(
         html_,
@@ -744,7 +757,7 @@ if selected == "String Similarity":
                     ) = cal_jaro_distance(normalized_char1, normalized_char2)
                     if result != 0:
                         st.markdown(
-                            f"""<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro Similarity between '{normalized_char1}' and '{normalized_char2}' = <b>{round(result,3)}</b></div>""",
+                            f"""<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro Similarity between <b>'{normalized_char1}'</b> and <b>'{normalized_char2}'</b> = <b>{round(result,3)}</b></div>""",
                             unsafe_allow_html=True,
                         )
                     else:
@@ -752,7 +765,7 @@ if selected == "String Similarity":
                         #     f"JD('{normalized_char1},{normalized_char2}') = 1/3 ( ({match_count} / {len_str1}) + ({match_count} / {len_str2}) + ( ({match_count} - {0})/{match_count}) ) = {0}"
                         # )
                         st.markdown(
-                            f"<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro Similarity between '{normalized_char1}' and '{normalized_char2}' = <b>{0}</b></div>",
+                            f"<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro Similarity between <b>'{normalized_char1}'</b> and <b>'{normalized_char2}'</b> = <b>{0}</b></div>",
                             unsafe_allow_html=True,
                         )
                         # st.warning("No matching characters!")
@@ -918,7 +931,7 @@ if selected == "String Similarity":
                         #     f"JD('{normalized_char1},{normalized_char2}') = 1/3 ( ({match_count} / {len_str1}) + ({match_count} / {len_str2}) + ( ({match_count} - {0})/{match_count}) ) = {0}"
                         # )
                         st.markdown(
-                            f"<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro Similarity between '{normalized_char1}' and '{normalized_char2}' = <b>{0}</b></div>",
+                            f"<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro Similarity between <b>'{normalized_char1}'</b> and <b>'{normalized_char2}'</b> = <b>{0}</b></div>",
                             unsafe_allow_html=True,
                         )
                         st.warning("No matching characters!")
@@ -947,7 +960,7 @@ if selected == "String Similarity":
                         transPos,
                     ) = cal_jaro_distance(normalized_char1, normalized_char2)
                     st.markdown(
-                        f"""<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro-Winkler Similarity between '{normalized_char1}' and '{normalized_char2}' = <b>{round(jaro_winkler_distance,3)}</b></div>""",
+                        f"""<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro-Winkler Similarity between <b>'{normalized_char1}'</b> and <b>'{normalized_char2}'</b> = <b>{round(jaro_winkler_distance,3)}</b></div>""",
                         unsafe_allow_html=True,
                     )
                     html_ = "<table style='text-align:center;border: 2px solid black;'>"
@@ -1076,7 +1089,7 @@ if selected == "String Similarity":
                     st.write(f"q = {prefix_length}")
                     if result != 0:
                         st.markdown(
-                            f"""<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro Similarity between '{normalized_char1}' and '{normalized_char2}' = <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            f"""<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro Similarity between <b>'{normalized_char1}'</b> and <b>'{normalized_char2}'</b> = <math xmlns="http://www.w3.org/1998/Math/MathML">
                                 <mfrac>
                                     <mn>1</mn>
                                     <mn>3</mn>
@@ -1108,7 +1121,7 @@ if selected == "String Similarity":
                         )
                     else:
                         st.markdown(
-                            f"<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro Similarity between '{normalized_char1}' and '{normalized_char2}' = <b>{0}</b></div>",
+                            f"<div style='background-color:#d4edda;padding: 20px;color: #155724;'>Jaro Similarity between <b>'{normalized_char1}'</b> and <b>'{normalized_char2}'</b> = <b>{0}</b></div>",
                             unsafe_allow_html=True,
                         )
                         # st.write(
