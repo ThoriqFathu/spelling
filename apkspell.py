@@ -134,36 +134,36 @@ if selected == "Speling Correction":
     st.title("Spelling Correction for Madurese")
 
     tag_hint = """
-        <div style="background-color: #fdd271; width: 400px; padding: 10px;">
+        <div style="background-color: #fdd271; width: 650px; padding: 10px;">
             <h5>Hint &#x1F4A1;</h5>
             <p>Typing Madurese accented characters:</p>
             <div style="display: flex;">
                 <div>
-                    <table style="width:200px; text-align:center; margin:auto;">
+                    <table style="width:600px; text-align:center; margin:auto;">
                     <tr>
                         <th style="border: solid 1px black;">Accented Characters</th>
-                        <th style="border: solid 1px black;">Combining</th>
-                        <th style="border: None">Example</th>
+                        <th style="border: solid 1px black;">Typing Keys</th>
+                        <th style="border: solid 1px black;">Example</th>
                     </tr>
                     <tr>
                         <td style="border: solid 1px black;">â</td>
-                        <td style="border: solid 1px black;">^ + a</td>
-                        <td>ab^a' &rarr; abâ'</td>
+                        <td style="border: solid 1px black;">^a</td>
+                        <td style="border: solid 1px black;">ab^a' &rarr; abâ'</td>
                     </tr>
                     <tr>
                         <td style="border: solid 1px black;">è</td>
-                        <td style="border: solid 1px black;">` + e</td>
-                        <td>l`eker &rarr; lèker</td>
+                        <td style="border: solid 1px black;">`e</td>
+                        <td style="border: solid 1px black;">l`eker &rarr; lèker</td>
                     </tr>
                     <tr>
                         <td style="border: solid 1px black;">ḍ</td>
-                        <td style="border: solid 1px black;">. + d</td>
-                        <td>a.d.dhep &rarr; aḍḍhep</td>
+                        <td style="border: solid 1px black;">.d</td>
+                        <td style="border: solid 1px black;">a.d.dhep &rarr; aḍḍhep</td>
                     </tr>
                     <tr>
                         <td style="border: solid 1px black;">ṭ</td>
-                        <td style="border: solid 1px black;">. + t</td>
-                        <td>an.tok &rarr; anṭok</td>
+                        <td style="border: solid 1px black;">.t</td>
+                        <td style="border: solid 1px black;">an.tok &rarr; anṭok</td>
                     </tr>
                     </table>
                 </div>
@@ -623,42 +623,43 @@ if selected == "String Similarity":
     st.title("String Similarity")
 
     tag_hint = """
-        <div style="background-color: #fdd271; width: 500px; padding: 10px;">
+        <div style="background-color: #fdd271; width: 650px; padding: 10px;">
             <h5>Hint &#x1F4A1;</h5>
             <p>Typing Madurese accented characters:</p>
             <div style="display: flex;">
                 <div>
-                    <table style="width:200px; text-align:center; margin:auto;">
+                    <table style="width:600px; text-align:center; margin:auto;">
+                    <tr>
+                        <th style="border: solid 1px black;">Accented Characters</th>
+                        <th style="border: solid 1px black;">Typing Keys</th>
+                        <th style="border: solid 1px black;">Example</th>
+                    </tr>
                     <tr>
                         <td style="border: solid 1px black;">â</td>
-                        <td style="border: solid 1px black;">^ + a</td>
+                        <td style="border: solid 1px black;">^a</td>
+                        <td style="border: solid 1px black;">ab^a' &rarr; abâ'</td>
                     </tr>
                     <tr>
                         <td style="border: solid 1px black;">è</td>
-                        <td style="border: solid 1px black;">` + e</td>
+                        <td style="border: solid 1px black;">`e</td>
+                        <td style="border: solid 1px black;">l`eker &rarr; lèker</td>
                     </tr>
                     <tr>
                         <td style="border: solid 1px black;">ḍ</td>
-                        <td style="border: solid 1px black;">. + d</td>
+                        <td style="border: solid 1px black;">.d</td>
+                        <td style="border: solid 1px black;">a.d.dhep &rarr; aḍḍhep</td>
                     </tr>
                     <tr>
                         <td style="border: solid 1px black;">ṭ</td>
-                        <td style="border: solid 1px black;">. + t</td>
+                        <td style="border: solid 1px black;">.t</td>
+                        <td style="border: solid 1px black;">an.tok &rarr; anṭok</td>
                     </tr>
                     </table>
                 </div>
-                <div style="margin-left: 100px">
-                <p>Example:</p>
-                <ul>
-                <li>ab^a' &rarr; abâ'</li>
-                <li>l`eker &rarr; lèker</li>
-                <li>a.d.dhep &rarr; aḍḍhep</li>
-                <li>an.tok &rarr; anṭok</li>
-                </ul>
             </div>
-            </div>
+                
+         </div>
             
-        </div>
     """
     st.markdown(tag_hint, unsafe_allow_html=True)
     # Daftar pilihan untuk dropdown
@@ -1176,7 +1177,7 @@ if selected == "About":
             width=100,
         )
         st.markdown(
-            "<div style='text-align: center; margin-left: 0px; width:100px'><a href='noor.ifada@trunojoyo.ac.id'>Noor Ifada</a></div>",
+            "<div style='text-align: center; margin-left: 0px; width:100px'><a href='mailto:noor.ifada@trunojoyo.ac.id'>Noor Ifada</a></div>",
             unsafe_allow_html=True,
         )
         # st.markdown(
@@ -1185,26 +1186,26 @@ if selected == "About":
     with col2:
         st.image("bu_fika1.jpeg", width=100)
         st.markdown(
-            "<div style='text-align: center; margin-left: 0px; width:100px'><a href='fika.rachman@trunojoyo.ac.id'>Fika Hastarita Rachman</a></div>",
+            "<div style='text-align: center; margin-left: 0px; width:100px'><a href='mailto:fika.rachman@trunojoyo.ac.id'>Fika Hastarita Rachman</a></div>",
             unsafe_allow_html=True,
         )
     with col3:
         st.image("ibu_sri1.jpeg", width=100)
         st.markdown(
-            "<div style='text-align: center; margin-left: 0px; width:100px'><a href='s.wahyuni@trunojoyo.ac.id'>Sri Wahyuni</a></div>",
+            "<div style='text-align: center; margin-left: 0px; width:100px'><a href='mailto:s.wahyuni@trunojoyo.ac.id'>Sri Wahyuni</a></div>",
             unsafe_allow_html=True,
         )
     with col4:
         st.image("thoriq1.jpg", width=100)
         st.markdown(
-            "<div style='text-align: center; margin-left: 0px; width:100px'><a href='thoriq771@gmail.com'>Muhammad Fathuthoriq</a></div>",
+            "<div style='text-align: center; margin-left: 0px; width:100px'><a href='mailto:thoriq771@gmail.com'>Muhammad Fathuthoriq</a></div>",
             unsafe_allow_html=True,
         )
 
     with col5:
         st.image("irul.jpeg", width=100)
         st.markdown(
-            "<div style='text-align: center; margin-left: 0px; width:100px'><a href='moh.amirullah17@gmail.com'>Moh. Amirullah</a></div>",
+            "<div style='text-align: center; margin-left: 0px; width:100px'><a href='mailto:moh.amirullah17@gmail.com'>Moh. Amirullah</a></div>",
             unsafe_allow_html=True,
         )
     # st.markdown("""<img src="thoriq.jpg">""", unsafe_allow_html=True)
